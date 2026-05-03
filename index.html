@@ -88,13 +88,24 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Abrar Website</a>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/logo.jpg" width="40" class="me-2">
+            Abrar Website
+        </a>
 
         <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+            <li class="nav-item ms-3">
+                <a href="login.html" class="btn btn-success">Login</a>
+            </li>
+
+            <li class="nav-item ms-2">
+                <a href="register.html" class="btn btn-warning">Register</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -111,6 +122,9 @@
                     Create a professional portfolio website in minutes.
                 </p>
 
+                <a href="register.html" class="btn btn-primary me-2">Get Started</a>
+                <a href="login.html" class="btn btn-outline-dark">Login</a>
+
                 <div class="stats mt-4">
                     <span>15+ Projects</span>
                     <span>26K Users</span>
@@ -118,8 +132,12 @@
                 </div>
             </div>
 
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center position-relative">
                 <img src="images/hero.jpg" class="hero-img">
+
+                <div class="tag tag1">Java</div>
+                <div class="tag tag2">Web Dev</div>
+                <div class="tag tag3">Portfolio</div>
             </div>
 
         </div>
@@ -129,15 +147,44 @@
 <!-- ABOUT -->
 <div id="about" class="section">
     <h2>About Platform</h2>
-    <p>We help you create modern portfolios easily.</p>
+    <p>Welcome to Abra Portfolio Creation, where I turn your professional journey into a compelling digital narrative.</p>
+    <p>Specializing in creating sleek, customized portfolios for creatives and freelancers, I help you showcase your best work to land your next big opportunity.</p>
+    <p>With a focus on modern design and user-friendly layouts, I bridge the gap between your skills and potential employers.</p>
+    <p>Our platform helps users create stunning portfolios easily.</p>
 </div>
 
 <!-- PORTFOLIO -->
 <div id="portfolio" class="section">
     <h2>Sample Portfolios</h2>
+    <div class="container">
+        <div class="row mt-4">
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <img src="images/p1.jpg" class="img-fluid mb-2">
+                    <h5>Binjan</h5>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <img src="images/p2.jpg" class="img-fluid mb-2">
+                    <h5>Freya Moore</h5>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <img src="images/p3.jpg" class="img-fluid mb-2">
+                    <h5>Simon Sparks</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
-<!-- CONTACT -->
+<!-- 🔥 CONTACT (UPDATED) -->
 <div id="contact" class="section">
     <h2>Contact Us</h2>
 
@@ -167,7 +214,7 @@
     <p>© 2026 Abrar</p>
 </div>
 
-<!-- JAVASCRIPT -->
+<!-- 🔥 JAVASCRIPT -->
 <script>
     function sendMessage(event) {
         event.preventDefault();
@@ -196,6 +243,5 @@
         });
     }
 </script>
-
 </body>
 </html>
