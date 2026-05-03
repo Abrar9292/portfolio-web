@@ -80,6 +80,42 @@
             color: white;
             padding: 20px;
         }
+
+        /* 🔥 ONLY MOBILE FIX (ADDED) */
+        @media (max-width: 768px) {
+
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 6px;
+                font-size: 14px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .hero-img {
+                width: 200px;
+                margin-top: 20px;
+            }
+
+            .hero-wrapper {
+                padding: 80px 10px;
+            }
+
+            .hero-card {
+                padding: 20px;
+            }
+
+            .stats span {
+                display: block;
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 
@@ -184,7 +220,7 @@
     </div>
 </div>
 
-<!-- 🔥 CONTACT (UPDATED) -->
+<!-- CONTACT -->
 <div id="contact" class="section">
     <h2>Contact Us</h2>
 
@@ -214,7 +250,7 @@
     <p>© 2026 Abrar</p>
 </div>
 
-<!-- 🔥 JAVASCRIPT -->
+<!-- JS -->
 <script>
     function sendMessage(event) {
         event.preventDefault();
@@ -243,5 +279,6 @@
         });
     }
 </script>
+
 </body>
 </html>
