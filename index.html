@@ -6,117 +6,270 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            background: linear-gradient(to right, #dfe9f3, #ffffff);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #0f0f1a, #050510);
+            color: white;
         }
 
+        /* NAVBAR */
         .navbar {
-            background: white;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(15px);
+            background: rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
+        .navbar a {
+            color: white !important;
+        }
+
+        /* HERO */
         .hero-wrapper {
-            padding: 100px 20px;
-        }
-
-        .hero-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .hero-title {
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        .hero-text {
-            margin-top: 15px;
-            color: gray;
-        }
-
-        .hero-img {
-            width: 300px;
-            border-radius: 20px;
-        }
-
-        .tag {
-            position: absolute;
-            background: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            font-size: 12px;
-        }
-
-        .tag1 { top: 20%; left: 10%; }
-        .tag2 { top: 50%; right: 10%; }
-        .tag3 { bottom: 10%; left: 30%; }
-
-        .stats span {
-            margin-right: 20px;
-            font-weight: bold;
-        }
-
-        .section {
-            padding: 80px 20px;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+                        url('images/hero1.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
 
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .hero-title {
+            font-size: 65px;
+            font-weight: 700;
         }
 
-        #contact {
-            background: #f8f9fa;
+        .hero-text {
+            margin-top: 20px;
+            color: #ccc;
         }
 
-        .footer {
-            background: black;
+        /* BUTTONS */
+        .btn-premium {
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
             color: white;
-            padding: 20px;
+            box-shadow: 0 10px 30px rgba(255,65,108,0.6);
+            transition: 0.3s;
         }
 
-        /* ONLY MOBILE FIX  (Added) */
-        
-        @media (max-width: 768px) {
-
-            .navbar-nav {
-                text-align: center;
-            }
-
-            .navbar-nav .nav-link {
-                padding: 6px;
-                font-size: 14px;
-            }
-
-            .hero-title {
-                font-size: 28px;
-                text-align: center;
-            }
-
-            .hero-img {
-                width: 200px;
-                margin-top: 20px;
-            }
-
-            .hero-wrapper {
-                padding: 80px 10px;
-            }
-
-            .hero-card {
-                padding: 20px;
-            }
-
-            .stats span {
-                display: block;
-                margin: 5px 0;
-            }
+        .btn-premium:hover {
+            transform: scale(1.05);
         }
+
+        .btn-login {
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+        }
+
+        .stats span {
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        /* ABOUT Section */
+        .about-premium{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            padding:100px 0;
+            background: linear-gradient(135deg,#020617,#0f172a);
+        }
+
+        .about-img-main{
+            border-radius:25px;
+            overflow:hidden;
+            box-shadow:0 30px 80px rgba(0,0,0,0.8);
+        }
+
+        .about-img-main img{
+            border-radius:25px;
+            transition:0.5s;
+        }
+
+        .about-img-main:hover img{
+            transform:scale(1.05);
+        }
+
+        .about-img-small{
+            position:absolute;
+            bottom:-30px;
+            right:30px;
+            width:200px;
+            border-radius:20px;
+            overflow:hidden;
+            border:4px solid #111;
+            box-shadow:0 20px 50px rgba(0,0,0,0.7);
+        }
+
+        .about-tag{
+            color:#38bdf8;
+            letter-spacing:2px;
+        }
+
+        .about-title{
+            font-size:50px;
+            font-weight:700;
+            margin:20px 0;
+        }
+
+        .about-text{
+            color:#cbd5e1;
+            font-size:18px;
+        }
+
+        .about-card{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(15px);
+            padding:20px;
+            border-radius:15px;
+            text-align:center;
+            transition:0.4s;
+        }
+
+        .about-card:hover{
+            transform:translateY(-10px);
+        }
+
+        /* 🔥 PORTFOLIO ULTRA DESIGN */
+#portfolio{
+    padding:120px 20px;
+    background: linear-gradient(135deg,#020617,#0f172a);
+    text-align:center;
+}
+
+.portfolio-main-title{
+    font-size:42px;
+    font-weight:700;
+}
+
+.portfolio-subtitle{
+    color:#aaa;
+    margin-top:10px;
+}
+
+/* CARD */
+.portfolio-card{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    background:#111;
+    box-shadow:0 25px 60px rgba(0,0,0,0.8);
+    transition:0.4s;
+}
+
+.main-img{
+    width:100%;
+    transition:0.5s;
+}
+
+.portfolio-card:hover .main-img{
+    transform:scale(1.1);
+}
+
+.portfolio-card:hover{
+    transform:translateY(-10px);
+}
+
+/* MINI IMAGE */
+.mini-img{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:70px;
+    border-radius:10px;
+    border:3px solid #111;
+    box-shadow:0 10px 30px rgba(0,0,0,0.7);
+}
+
+/* TEXT */
+.portfolio-content{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(transparent,rgba(0,0,0,0.95));
+    color:white;
+}
+
+/* INFO BOX */
+.portfolio-info-box{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    backdrop-filter:blur(15px);
+    transition:0.3s;
+}
+
+.portfolio-info-box:hover{
+    transform:translateY(-5px);
+}
+
+       /* 🔥 CONTACT ULTRA PREMIUM */
+#contact{
+    padding:120px 20px;
+    background: linear-gradient(135deg,#020617,#0f172a);
+}
+
+.contact-box{
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.8);
+}
+
+.contact-title{
+    font-size:40px;
+    font-weight:700;
+}
+
+.contact-sub{
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+.contact-info{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:20px;
+    height:100%;
+}
+
+.contact-info h5{
+    margin-top:20px;
+    color:#38bdf8;
+}
+
+.contact-info p{
+    color:#ccc;
+    margin-bottom:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:rgba(255,255,255,0.1) !important;
+    border:none !important;
+    color:white !important;
+    border-radius:10px;
+    padding:12px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#bbb;
+}
+
+.contact-form button{
+    margin-top:10px;
+}
+
     </style>
 </head>
 
@@ -125,6 +278,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
+
         <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="images/logo.jpg" width="40" class="me-2">
             Abrar Website
@@ -137,149 +291,254 @@
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 
             <li class="nav-item ms-3">
-                <a href="login.html" class="btn btn-success">Login</a>
+                <a href="login.html" class="btn btn-premium btn-login">Login</a>
             </li>
 
             <li class="nav-item ms-2">
-                <a href="register.html" class="btn btn-warning">Register</a>
+                <a href="register.html" class="btn btn-premium">Register</a>
+            </li>
+            <li class="nav-item ms-3">
+                <a href="#contact" class="btn btn-premium btn-login">Get In Touch</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO Section ( Baground / home ) -->
 <div class="hero-wrapper">
-    <div class="hero-card container">
+    <div>
+        <h1 class="hero-title">Build Your Dream Portfolio</h1>
+        <p class="hero-text">Create stunning portfolio websites in minutes</p>
+
+        <a href="register.html" class="btn btn-premium">Get Started</a>
+
+        <div class="stats mt-4">
+            <span>15+ Projects</span>
+            <span>26K Users</span>
+            <span>98% Success</span>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT Section -->
+<div id="about" class="about-premium">
+    <div class="container">
         <div class="row align-items-center">
 
-            <div class="col-md-6">
-                <h1 class="hero-title">Lets Work Together </h1>
+            <!-- IMAGES -->
+            <div class="col-md-6 position-relative">
+                <div class="about-img-main">
+                    <img src="images/aboutimg.jpg" class="img-fluid">
+                </div>
 
-                <p class="hero-text">
-                    Create a professional portfolio website in minutes.
+                <div class="about-img-small">
+                    <img src="images/g1.jpg" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- TEXT -->
+            <div class="col-md-6">
+
+                <h5 class="about-tag">ABOUT OUR PLATFORM</h5>
+
+                <h2 class="about-title">
+                    Build Identity. Show Talent. Stand Out
+                </h2>
+
+                <p class="about-text">
+                    Abrar Portfolio helps you create stunning and professional
+                    portfolio websites in minutes.
                 </p>
 
-                <a href="register.html" class="btn btn-primary me-2">Get Started</a>
-                <a href="login.html" class="btn btn-outline-dark">Login</a>
+                <p class="about-text">
+                    Showcase your skills, projects and achievements with a modern design.
+                </p>
 
-                <div class="stats mt-4">
-                    <span>15+ Projects</span>
-                    <span>26K Users</span>
-                    <span>98% Success</span>
+                <div class="row mt-4">
+
+                    <div class="col-4">
+                        <div class="about-card">
+                            <h3>500+</h3>
+                            <p>Users</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="about-card">
+                            <h3>98%</h3>
+                            <p>Success</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="about-card">
+                            <h3>24/7</h3>
+                            <p>Support</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-6 text-center position-relative">
-                <img src="images/hero.jpg" class="hero-img">
-
-                <div class="tag tag1">Java</div>
-                <div class="tag tag2">Web Dev</div>
-                <div class="tag tag3">Portfolio</div>
-            </div>
-
         </div>
     </div>
 </div>
 
-<!-- ABOUT -->
-<div id="about" class="section">
-    <h2>About Platform</h2>
-    <p>Welcome to Abra Portfolio Creation, where I turn your professional journey into a compelling digital narrative.</p>
-    <p>Specializing in creating sleek, customized portfolios for creatives and freelancers, I help you showcase your best work to land your next big opportunity.</p>
-    <p>With a focus on modern design and user-friendly layouts, I bridge the gap between your skills and potential employers.</p>
-    <p>Our platform helps users create stunning portfolios easily.</p>
-</div>
-
-<!-- PORTFOLIO -->
+<!-- Sample PORTFOLIO -->
 <div id="portfolio" class="section">
-    <h2>Sample Portfolios</h2>
+
+    <h1 class="portfolio-main-title">PortFolio Sample</h1>
+    <p class="portfolio-subtitle">Generate Your Potio Like This Porfolio</p>
+    <p class="portfolio-subtitle">
+        We design modern, high-quality portfolio websites for developers, designers and creators.
+    </p>
+
     <div class="container">
-        <div class="row mt-4">
 
+        <div class="row g-4 mt-4">
+
+            <!-- CARD 1 -->
             <div class="col-md-4">
-                <div class="card p-3">
-                    <img src="images/p1.jpg" class="img-fluid mb-2">
-                    <h5>Binjan</h5>
+                <div class="portfolio-card">
+
+                    <img src="images/p1.jpg" class="img-fluid main-img">
+
+                    <!-- EXTRA SMALL IMAGE -->
+                    <img src="images/g1.jpg" class="mini-img">
+
+                    <div class="portfolio-content">
+                        <h5>Binjan</h5>
+                        <p>Full Stack Developer</p>
+                        <small>React • Java • APIs • Clean UI</small>
+                    </div>
+
                 </div>
             </div>
 
+            <!-- CARD 2 -->
             <div class="col-md-4">
-                <div class="card p-3">
-                    <img src="images/p2.jpg" class="img-fluid mb-2">
-                    <h5>Freya Moore</h5>
+                <div class="portfolio-card">
+
+                    <img src="images/p2.jpg" class="img-fluid main-img">
+                    <img src="images/hero.jpg" class="mini-img">
+
+                    <div class="portfolio-content">
+                        <h5>Freya Moore</h5>
+                        <p>UI/UX Designer</p>
+                        <small>Figma • Branding • User Experience</small>
+                    </div>
+
                 </div>
             </div>
 
+            <!-- CARD 3 -->
             <div class="col-md-4">
-                <div class="card p-3">
-                    <img src="images/p3.jpg" class="img-fluid mb-2">
-                    <h5>Simon Sparks</h5>
+                <div class="portfolio-card">
+
+                    <img src="images/p3.jpg" class="img-fluid main-img">
+                    <img src="images/g2.jpg" class="mini-img">
+
+                    <div class="portfolio-content">
+                        <h5>Simon Sparks</h5>
+                        <p>Frontend Developer</p>
+                        <small>Animations • HTML • CSS • JS</small>
+                    </div>
+
                 </div>
             </div>
 
         </div>
+
+        <!-- EXTRA INFO ROW -->
+        <div class="row mt-5 text-center">
+
+            <div class="col-md-4">
+                <div class="portfolio-info-box">
+                    <h3>100+</h3>
+                    <p>Design Templates</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="portfolio-info-box">
+                    <h3>25K+</h3>
+                    <p>Active Users</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="portfolio-info-box">
+                    <h3>4.9/5</h3>
+                    <p>User Rating</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- CONTACT -->
-<div id="contact" class="section">
-    <h2>Contact Us</h2>
+<!-- CONTACT uss -->
+<div id="contact">
 
-    <div class="container mt-4">
-        <div class="row justify-content-center">
+    <div class="container">
+        <div class="text-center mb-5">
+        <h1 class="contact-title">Contact Us</h1>
+            <h3 class="contact-sub">Get In Touch</h3>
+            <p class="contact-sub">
+                Have a project idea or need help? Contact us and we’ll respond quickly.
+            </p>
+        </div>
 
-            <div class="col-md-6">
-                <form onsubmit="sendMessage(event)">
+        <div class="row g-4">
 
-                    <input type="text" id="name" class="form-control mb-3" placeholder="Your Name">
+            <!-- LEFT INFO -->
+            <div class="col-md-5">
+                <div class="contact-info">
 
-                    <input type="email" id="email" class="form-control mb-3" placeholder="Your Email">
+                    <h4>Contact Information</h4>
+                    <p>We are here to help you build your professional portfolio.</p>
 
-                    <textarea id="message" class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
+                    <h5>Email</h5>
+                    <p>support@abrarwebsite.com</p>
 
-                    <button class="btn btn-primary w-100">Send Message</button>
+                    <h5>Phone</h5>
+                    <p>+91 9079009292</p>
 
-                </form>
+                    <h5>Location</h5>
+                    <p>Maharashtra, India</p>
+
+                    <h5>Working Hours</h5>
+                    <p>Mon - Sat : 9AM - 7PM</p>
+
+                </div>
             </div>
 
+            <!-- RIGHT FORM -->
+            <div class="col-md-7">
+                <div class="contact-box">
+
+                    <h4 class="mb-4">Send Message</h4>
+
+                    <form class="contact-form">
+                        <input type="text" class="form-control mb-3" placeholder="Your Name">
+
+                        <input type="email" class="form-control mb-3" placeholder="Your Email">
+
+                        <input type="text" class="form-control mb-3" placeholder="Subject">
+
+                        <textarea class="form-control mb-3" rows="5" placeholder="Your Message"></textarea>
+
+                        <button class="btn btn-premium w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer text-center">
+    <h5>Abrar Portfolio</h5>
+    <p>support@abrarwebsite.com | +91 9079009292</p>
     <p>© 2026 Abrar</p>
 </div>
-
-<!-- JS -->
-<script>
-    function sendMessage(event) {
-        event.preventDefault();
-
-        let data = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value
-        };
-
-        fetch("https://your-backend-url.com/api/contact/save", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-        .then(res => res.text())
-        .then(msg => {
-            alert(msg);
-            document.querySelector("form").reset();
-        })
-        .catch(err => {
-            console.log(err);
-            alert("Error sending message!");
-        });
-    }
-</script>
 
 </body>
 </html>
